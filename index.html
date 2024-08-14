@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Toc Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Architects+Daughter&family=Bevan:ital@0;1&family=Bree+Serif&family=Gupter:wght@400;500;700&family=Luckiest+Guy&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="start-container">
+        <p class="players-text roboto-black">XO</p>
+        <div class="select-container">
+          <p>PICK PLAYER 1'S MARK</p>
+          <div class="select-player">
+            <div class="x-player player" data-set="x">X</div>
+            <div class="o-player player" data-set="o">O</div>
+          </div>
+          <p>REMEMBER: X GOES FIRST</p>
+        </div>
+        <button class="newgame__cpu--btn btn">NEW GAME (VS CPU)</button>
+        <button class="newgame__player--btn btn">NEW GAME (VS PLAYER)</button>
+      </div>
+      <div class="game-container hidden">
+        <div class="turn-box">
+          <p class="turn-player roboto-black">XO</p>
+          <p class="turn">X TURN</p>
+          <button class="reset-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 reset-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="game">
+          <div class="box box1 roboto-black" data-box="1"></div>
+          <div class="box box2 roboto-black" data-box="2"></div>
+          <div class="box box3 roboto-black" data-box="3"></div>
+          <div class="box box4 roboto-black" data-box="4"></div>
+          <div class="box box5 roboto-black" data-box="5"></div>
+          <div class="box box6 roboto-black" data-box="6"></div>
+          <div class="box box7 roboto-black" data-box="7"></div>
+          <div class="box box8 roboto-black" data-box="8"></div>
+          <div class="box box9 roboto-black" data-box="9"></div>
+        </div>
+        <div class="results">
+          <div class="x-result result">
+            <p>X (YOU)</p>
+            <span class="num-x-won">0</span>
+          </div>
+          <div class="draw-result result">
+            <p>Draw!</p>
+            <span class="num-draw">0</span>
+          </div>
+          <div class="o-result result">
+            <p>O (CPU)</p>
+            <span class="num-o-won">0</span>
+          </div>
+        </div>
+        <div class="restart-container container hidden">
+          <p>RESTART GAME?</p>
+          <div class="restart-buttons">
+            <button class="cancel-btn restart-btn">No, cancel</button>
+            <button class="new-game-btn restart-btn">Yes, Restart</button>
+          </div>
+        </div>
+        <div class="winner-container container hidden">
+          <p class="result-text"></p>
+          <div class="winner-buttons">
+            <button class="quit-btn">QUIT</button>
+            <button class="next-round-btn">NEXT ROUND</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
